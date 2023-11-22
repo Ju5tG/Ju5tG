@@ -10,6 +10,7 @@ foreach ($file in $files) {
     $hash[$file.Name] = $count
 }
 $sorted = $hash.GetEnumerator() | Sort-Object -Property Value -Descending
+$sorted
 $top_file = $sorted[0].Name
 $top_count = $sorted[0].Value
 Write-Host "File with the most IOCs: $top_file ($top_count IOCs)"
