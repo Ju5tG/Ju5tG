@@ -1,0 +1,1 @@
+Get-ADGroupMember -Identity "Administrators" | Get-ADUser -Properties * | Select-Object Description, Enabled, DistinguishedName, SamAccountName, @{Name='LastLogon';Expression={[DateTime]::FromFileTime($_.LastLogon)}}, Manager
