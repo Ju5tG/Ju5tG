@@ -1,7 +1,7 @@
 $IP = Read-Host -Prompt 'Input your desired IP address'
 $MaskBits = Read-Host -Prompt 'Enter number of mask bits'  # This means subnet mask = 255.255.255.0
 $Gateway = Read-Host -Prompt 'Enter Default Gateway'
-$Dns = Read-Host -Prompt 'Enter DNS servers comma separated wrapped in ""'
+$Dns = Read-Host -Prompt 'Enter DNS servers comma separated'
 $IPType = "IPv4"
 # Retrieve the network adapter that you want to configure
 $adapter = Get-NetAdapter | ? {$_.Status -eq "up"}
